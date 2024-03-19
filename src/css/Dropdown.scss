@@ -1,0 +1,77 @@
+@use 'globals';
+
+.dropdown {
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+.dropdown-selected {
+    font-size: 1rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .dropdown-arrow {
+        fill: globals.$black-100;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        background-color: globals.$white-200;
+        .dropdown-arrow {
+            fill: globals.$black-400;
+        }
+    
+    }
+    &.open {
+        background-color: globals.$white-300;
+        .dropdown-arrow {
+            fill: globals.$black-400;
+        
+        }
+        svg {
+            rotate: 180deg;
+        }
+    }
+} 
+
+.dropdown-options {
+
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 4px 0px #6C86AD40;
+
+    border-radius: 0.75rem;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.3s;
+
+    &.open {
+        max-height: 1000px;
+    }
+
+    .dropdown-option{
+        padding-block: 0.75rem;
+        padding-left: 1rem;
+        &:hover {
+            background-color: globals.$white-300;
+        }
+    }
+}

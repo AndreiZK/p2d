@@ -1,0 +1,48 @@
+@use 'globals';
+
+.custom-button {
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    background-color: none;
+    border: none;
+
+    transition: all 0.3s;
+
+    &.white {
+        background-color: globals.$white-100;
+        color: globals.$black-500;
+        border: 1px solid globals.$white-300;
+        &:hover {
+            background-color: globals.$white-300;
+        }
+    }
+    &.gray {
+        background-color: globals.$white-100;
+        color: globals.$black-500;
+        border: 1px solid globals.$white-300;
+    }
+    &.blue {
+        background-color: globals.$cyan-300;
+        color: globals.$white-200;
+        &:hover {
+            background-color: globals.$cyan-200;
+        }
+    }
+
+    @media (max-width: globals.$break-point) {
+        padding: 0.375em 0.5em;
+    border-radius: 0.75rem;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    &.lg {
+        font-size: 1rem;
+        font-weight: 500;
+        padding-block: 0.875rem;
+    }
+    }
+}
