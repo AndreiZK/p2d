@@ -1,14 +1,12 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
       <Header />
       <div style={{ height: "200vh" }}>
-        <div>43817904</div>
+        <Hero />
       </div>
     </>
   );
