@@ -18,10 +18,9 @@
     margin-inline: auto;
     width: calc(globals.$break-point - 3rem);
 
-    background-image: radial-gradient(globals.$white-100 1px, transparent 1px);
+    background-image: radial-gradient(globals.$white-100 1px, rgba(255, 255, 255, 0.6) 1px);
     background-size: 30px 30px;
-    background-color: transparent;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(6px) ;
     
 
     display: flex;
