@@ -1,0 +1,184 @@
+@use 'globals';
+
+.solutions {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    
+    h4 {
+        font-size: 1rem;
+        text-align: center;
+        color: globals.$black-600;
+    }
+
+    .solutions-items {
+        width: 1400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        padding-block: 1.5rem;
+        background-color: #F9FAFF;
+        border-radius: 0.75rem;
+    }
+
+}
+
+.solution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .solution-icons {
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 40px;
+
+        .solution-icon {
+            position: absolute;
+            // height: 100%;
+            // width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 1;
+            
+            &.dark {
+                transition: all 0.3s;    
+                opacity: 0;
+                z-index: 10;
+
+            }
+        }
+    }
+
+    .solution-title {
+        font-size: 0.875rem;
+        text-align: center;
+        color: globals.$black-300;
+        transition: all 0.3s;
+        max-width: 6rem;
+
+        &::before {
+            display: block;
+            content: attr(data-title);
+            font-weight: 600;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+
+    &:hover {
+        .solution-icon.dark {
+            opacity: 1;   
+        }
+        .solution-title {
+            font-weight: 600;
+            color: globals.$black-600;
+        }
+    }
+}
+
+@media (max-width: globals.$break-point) {
+    .solutions {
+        margin-inline: 1rem;    
+        margin-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        
+        h4 {
+            font-size: 0.875rem;
+            text-align: center;
+            color: globals.$black-600;
+            font-weight: 400;
+            
+        }
+    
+        .solutions-items {
+            
+            width: calc(100% - 3rem);
+            overflow: scroll;
+            display: flex;
+            gap: 1.75rem;
+            align-items: center;
+            justify-content: flex-start;
+    
+    
+            padding: 1rem 1.5rem;
+            background-color: #F9FAFF;
+            border-radius: 0.75rem;
+        }
+    
+    }
+    
+    .solution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+    
+        .solution-icons {
+            position: relative;
+            display: block;
+            height: 40px;
+            width: 40px;
+    
+            .solution-icon {
+                position: absolute;
+                // height: 100%;
+                // width: 100%;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 1;
+                
+                &.dark {
+                    transition: all 0.3s;    
+                    opacity: 0;
+                    z-index: 10;
+    
+                }
+            }
+        }
+    
+        .solution-title {
+            font-size: 0.75rem;
+            text-align: center;
+            color: globals.$black-300;
+            transition: all 0.3s;
+            max-width: 5rem;
+    
+            &::before {
+                display: block;
+                content: attr(data-title);
+                font-weight: 600;
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+            }
+        }
+    
+        &:hover {
+            .solution-icon.dark {
+                opacity: 1;   
+            }
+            .solution-title {
+                font-weight: 600;
+                color: globals.$black-600;
+            }
+        }
+    }
+}
