@@ -1,6 +1,7 @@
 @use 'globals';
 
 .hero {
+    margin-top: 138px;
     z-index: 99;
     position: relative;
     overflow: hidden;
@@ -65,6 +66,7 @@
 
 @media (max-width: globals.$break-point) {
     .hero {
+        margin-top: 46px;
         padding: 1rem;
         width: calc(100% - 2rem);
         .hero-iphone {

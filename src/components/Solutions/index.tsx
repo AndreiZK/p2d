@@ -8,28 +8,28 @@ const solutionsData = [
     title: "Рестораны",
   },
   {
-    name: "Delivery Truck",
-    title: "Аренда транспорта",
-  },
-  {
     name: "Gift",
     title: "Сувенирные лавки",
   },
   {
-    name: "Home",
-    title: "Частные арендодатели",
+    name: "Delivery Truck",
+    title: "Аренда транспорта",
   },
   {
     name: "Hand Cart",
     title: "Доставка",
   },
   {
+    name: "Shop",
+    title: "Отели и хостелы",
+  },
+  {
     name: "Route",
     title: "Гиды и экскурсоводы",
   },
   {
-    name: "Shop",
-    title: "Отели и хостелы",
+    name: "Home",
+    title: "Частные арендодатели",
   },
 ];
 
