@@ -1,0 +1,130 @@
+@use 'globals';
+
+.input-container {
+    position: relative;
+    width: calc(100% - 2rem);
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    outline: 1px solid #DFE5FF;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
+    gap: 2px;
+
+    cursor:text;
+
+    &:hover {
+        outline: 2px solid #DFE5FF
+    }
+
+    .input {
+        border: none;
+        padding: 0;
+        display: block;
+        width: 100%;
+        
+        font-size: 0.875rem;
+        font-weight: 500;
+        z-index: 1;
+        max-height: 0;
+        line-height: 17.85px;
+        transition: all 0.3s;
+        caret-color: #005BFF;
+        color: #262A41;
+        &:focus, &:not(:placeholder-shown) {
+            max-height: 18px;
+            border: none;
+            outline: none;
+            ~ .label {
+                font-weight: 500;
+                font-size: 11px;
+                color: globals.$black-300;
+            }
+        }
+
+        
+
+        &.textarea {
+            max-height: 175px;
+            resize: none;
+
+            
+
+            &:focus, &:not(:placeholder-shown) {
+                max-height: 175px;
+            }
+
+            ~ .label {
+                font-weight: 500;
+                font-size: 11px;
+                color: globals.$black-300;
+            }
+        }
+        
+    }
+
+    &:has(.textarea) {
+        height: auto !important;
+        margin-bottom: 15px;
+    }
+
+    &:has(.input:focus) {
+        outline: 2px solid #005BFF;
+    }
+    &:has(.input:invalid) {
+        outline: 2px solid #EE3275;
+        .error-text {
+            display: block;
+        }
+    }
+    
+    .counter {
+        position: absolute;
+        bottom: -24px;
+        right: 0;
+        font-size: 12px;
+        color: #94A5BF;
+    }
+    
+
+    .label {
+        cursor:text;
+
+        color: globals.$black-200;
+        font-size: 0.875rem;
+
+        transition: all 0.3s;
+    }
+
+    .error-text {
+        display: none;
+        color: #EE3275;
+        font-size: 11px;
+        font-weight: 500;
+        position: absolute;
+        bottom: -18px;
+        left: 1rem;
+    }
+
+    &:has(.input[type=tel]) {
+        .input {
+            max-height: 18px;
+            border: none;
+            outline: none;
+            ~ .label {
+                font-weight: 500;
+                font-size: 11px;
+                color: globals.$black-300;
+            }
+        }
+    }
+
+    // &focus {
+    //     label {
+    //         transform: translateY(-5px);
+    //         font-size: 11px;
+    //     }
+    // }
+}

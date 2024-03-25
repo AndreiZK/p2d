@@ -1,7 +1,7 @@
 @use 'globals';
 
 .custom-button {
-    
+    display: inline-block;
     cursor: pointer;
     padding: 0.875rem 1.5rem;
     border-radius: 0.75rem;
@@ -19,6 +19,9 @@
         border: 1px solid globals.$white-300;
         &:hover {
             background-color: globals.$white-300;
+        }
+        &:active {
+            background-color: globals.$cyan-200;
         }
     }
     &.gray {

@@ -19,7 +19,7 @@
     width: calc(globals.$break-point - 3rem);
 
     background-image: radial-gradient(globals.$white-100 1px, rgba(255, 255, 255, 0.6) 1px);
-    background-size: 30px 30px;
+    background-size: 30px 25px;
     backdrop-filter: blur(6px) ;
     
 
@@ -28,9 +28,6 @@
     align-items: center;
 }
 
-.nav, .header-btns {
-    padding-block: 1rem;
-}
 
 .header-btns {
     display: flex;
@@ -39,6 +36,7 @@
 }
 
 .nav {
+    padding-block: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +160,7 @@
 
 .mobile-menu {
     position: fixed;
-    top: -8px;
+    top: 0px;
     left: 0;
     height: calc(100vh - 5rem) ;
     width: 70%;
@@ -259,7 +257,7 @@
 
 .backdrop {
     position: fixed;
-  top: -8px;
+  top: 0px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -284,6 +282,7 @@
 
     .header-wrapper {
         width: 100%;
+        margin-block: 0;
     }
 
     .nav-links {

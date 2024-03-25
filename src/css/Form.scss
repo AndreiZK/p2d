@@ -1,0 +1,194 @@
+@use 'globals';
+
+.form-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    width: 919px;
+    margin-inline: auto;
+
+    h2 {
+        text-align: center;
+        font-size: 1.875rem;
+        font-weight: 600;
+        color: globals.$black-500;
+        span {
+            font-weight: 800;
+        }
+    }
+    .form-steps {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        .form-step {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            .form-step-number {
+                color: globals.$white-100;
+                font-size: 1.5rem;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                background-color: globals.$black-600;
+            }
+            .form-step-title {
+                color: globals.$black-600;
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+            .form-step-description {
+                width: 80%;
+                font-size: 0.875rem;
+                color: globals.$black-300;
+                text-align: center;
+            }
+        }
+    }
+
+    form {
+        box-shadow: 0px 4px 4px 0px #00000026;
+        width: calc(100% - 5rem);
+        padding: 2rem 2.5rem;
+        border-radius: 0.75rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .form-title {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: globals.$black-500;
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .inputs-container {
+            width: 100%;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .form-actions {
+            background-image: url('form-actions-bg.png');
+            background-size: 100%;
+            background-color: rgba(255,255,255, 0.9);
+    background-blend-mode: lighten;
+            width: calc(100% - 2rem);
+            display: flex;
+            
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            .form-actions-guarantee {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                padding-left: 0.5rem;
+                span {
+                    font-size: 0.875rem;
+                    color: globals.$black-300;
+
+                }
+            }
+
+            .form-actions-buttons {
+                display: flex;
+                gap: 1rem;
+                .form-btn-wrapper {
+                    width: 190px;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .form-bottom {
+            color: globals.$black-200;
+            font-weight: 500;
+            font-size: 0.875rem;
+            a {
+                text-decoration: none;
+                color: globals.$cyan-300;
+            }
+        }
+    }
+}
+
+@media (max-width: globals.$break-point) {
+    .form-container {
+        padding-inline: 1rem;
+        width: auto;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .form-steps {
+            gap: 32px;
+            flex-direction: column;
+        }
+
+        form {
+            width: calc(100% - 2rem);
+            padding: 2rem 1rem;
+            gap: 1.5rem;
+
+            .form-title {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .inputs-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+
+                width: calc(100% - 1rem);
+                gap: 1rem;
+                justify-content: center;
+                padding: 1rem 0.5rem;
+                
+                .form-actions-guarantee {
+
+                    padding-left: 0rem;
+                }
+    
+                .form-actions-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 1rem;
+                    .form-btn-wrapper {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .form-bottom {
+                text-align: center;
+            }
+        
+        }
+    }
+}
