@@ -1,0 +1,197 @@
+@use 'globals';
+
+.how-works {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .how-works-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        
+        color: globals.$black-500;
+
+        margin-bottom: 0.5rem;
+    }
+
+    .how-works-subtitle {
+        margin-bottom: 2.5rem;
+    }
+
+    .how-works-subtitle, .card-caption {
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: globals.$black-200;
+    }
+
+    .systems {
+        display: flex;
+        width: 250px;
+        justify-content: space-between;
+        opacity: 0.7;
+        margin-bottom: 40px;
+    }
+
+    .how-works-cards {
+        // position: relative;
+        // height: 1300px;
+        // width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20vh;
+        gap: 18px;
+
+        .how-works-card {
+            position: sticky;
+            bottom: 20vh;
+
+            
+            width: 1400px;
+            height: 433px;
+            border-radius: 0.75rem;
+            padding: 24px, 60px, 24px, 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            overflow: hidden;
+
+            &.third {
+
+                background: linear-gradient(90deg, #E2E8F0 0%, #F9FAFF 100%);
+
+                z-index: 1;
+                // margin-top: 36px;
+            }
+
+            &.second {
+
+                background: linear-gradient(90deg, #E2E8F0 0%, #F9FAFF 100%);
+
+                z-index: 2;
+                // margin-top: 18px;
+
+                .circle {
+                    opacity: 0.7;
+                    position: absolute;
+                    height: 218px;
+                        width: 217px;
+                        z-index: 10;
+                    &.circle-1 {
+                        
+                        
+                        top: 5px;
+                        left: 200px;
+                    }
+                    &.circle-2 {
+                       
+                        
+                        bottom: 5px;
+                        left: 400px;
+                    }
+                }
+                box-shadow: 0px 4px 4px 0px #0000001A;
+
+            }
+
+            &.first {
+                background: linear-gradient(90deg, #E2E8F0 0%, #F9FAFF 100%);
+                z-index: 3;
+
+                box-shadow: 0px 4px 4px 0px #00000040;
+
+
+            }
+            .card-phone {
+                z-index: 1;
+                position: absolute  ;
+                top: 15px;
+                left: calc(275px - 209px);
+            }
+
+            .card-nfc {
+                z-index: 100;
+                position: absolute;
+                width: 344px;
+                height: 413px;
+                top: -145px;
+                left: -15px;
+                rotate: 90deg;
+                
+            }
+
+            .card-card {
+                z-index: 100;
+                position: absolute;
+                bottom: -30px;
+                left: 495px;
+
+                width: 256px;
+                border-radius: 25px;
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                width: 646px;
+                height: 171px;
+                gap: 24px;
+                .card-feature {
+                    margin-right: auto;
+                    padding: 8px 16px;
+                    border-radius: 0.75rem;
+                    background-color: globals.$white-200;
+                    font-weight: 600;
+                    color: globals.$cyan-200;
+                }
+                .card-title {
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: globals.$black-600;
+                    .bold {
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    .perks {
+        width: 1322px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: -5px;
+
+        padding: 0px, 0px, 40px, 78px;
+        gap: 60px;
+
+        .perk {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .perk-title {
+                font-weight: 600;
+                color: globals.$black-600;
+                font-size: 22px;
+            }
+            .perk-description {
+                font-weight: 300;
+                font-size: 16px;
+                color: globals.$black-600;
+            }
+            .perk-icon {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+}

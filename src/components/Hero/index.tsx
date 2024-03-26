@@ -7,11 +7,15 @@ const Hero = () => {
   const mapRef = useRef<HTMLImageElement | null>(null);
 
   const clientWidth = window.innerWidth;
+  const clientHeight = window.innerHeight;
 
   const handleMouseMove = (event: React.MouseEvent) => {
     const normalizedX = (event.clientX - clientWidth / 2) / clientWidth;
+    const normalizedY = (event.clientY - clientHeight / 2) / clientHeight;
     if (mapRef.current) {
-      mapRef.current.style.transform = `translateX(${normalizedX * -20}px)`;
+      mapRef.current.style.transform = `translate(${normalizedX * -20}px, ${
+        normalizedY * -20
+      }px)`;
     }
   };
 
