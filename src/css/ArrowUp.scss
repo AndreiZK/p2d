@@ -1,0 +1,41 @@
+@use 'globals';
+
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 16px;
+    height: 64px;
+    width: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+
+    background-color: globals.$white-100;
+
+    transition: all 0.3s;
+
+    &:hover {
+        @media (min-width: globals.$break-point) {
+            background-color: globals.$white-200
+        }
+        
+    }
+
+    &:active {
+        @media (max-width: globals.$break-point) {
+            background-color: globals.$white-200
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    @media (max-width: globals.$break-point) {
+        bottom: 50px;
+    right: 20px;
+    }
+}

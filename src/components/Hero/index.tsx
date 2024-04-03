@@ -1,26 +1,26 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import "../../css/Hero.scss";
 
 import Button from "../Button";
 
 const Hero = () => {
-  const mapRef = useRef<HTMLImageElement | null>(null);
+  // const mapRef = useRef<HTMLImageElement | null>(null);
 
-  const clientWidth = window.innerWidth;
-  const clientHeight = window.innerHeight;
+  // const clientWidth = window.innerWidth;
+  // const clientHeight = window.innerHeight;
 
-  const handleMouseMove = (event: React.MouseEvent) => {
-    const normalizedX = (event.clientX - clientWidth / 2) / clientWidth;
-    const normalizedY = (event.clientY - clientHeight / 2) / clientHeight;
-    if (mapRef.current) {
-      mapRef.current.style.transform = `translate(${normalizedX * -20}px, ${
-        normalizedY * -20
-      }px)`;
-    }
-  };
+  // const handleMouseMove = (event: React.MouseEvent) => {
+  //   const normalizedX = (event.clientX - clientWidth / 2) / clientWidth;
+  //   const normalizedY = (event.clientY - clientHeight / 2) / clientHeight;
+  //   if (mapRef.current) {
+  //     mapRef.current.style.transform = `translate(${normalizedX * -20}px, ${
+  //       normalizedY * -20
+  //     }px)`;
+  //   }
+  // };
 
   return (
-    <div onMouseMove={handleMouseMove} className="hero">
+    <div className="hero">
       <div className="hero-top">
         <span className="hero-small">Приложение для интернет-эквайринга</span>
         <h1>
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
         <img className="hero-iphone" src="hero-desktop.png" alt="" />
       </div>
-      <img ref={mapRef} className="hero-map" src="Hero-map.svg" alt="" />
+      <img className="hero-map" src="Hero-map.svg" alt="" />
     </div>
   );
 };

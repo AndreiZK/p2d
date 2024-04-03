@@ -17,9 +17,12 @@
         background-color: globals.$white-100;
         color: globals.$black-500;
         border: 1px solid globals.$white-300;
-        &:hover {
-            background-color: globals.$white-300;
+        @media (min-width: globals.$break-point) {
+            &:hover {
+                background-color: globals.$white-300;
+            }
         }
+        
         &:active {
             background-color: globals.$cyan-200;
         }
@@ -27,15 +30,21 @@
     &.gray {
         background-color: globals.$white-200;
         color: globals.$cyan-300;
-        &:hover {
-            background-color: globals.$white-300;
+
+        @media (min-width: globals.$break-point) {
+            &:hover {
+                background-color: globals.$white-300;
+            }
         }
     }
     &.blue {
         background-color: globals.$cyan-300;
         color: globals.$white-200;
-        &:hover {
-            background-color: globals.$cyan-200;
+
+        @media (min-width: globals.$break-point) {
+            &:hover {
+                background-color: globals.$cyan-200;
+            }
         }
     }
 

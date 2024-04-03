@@ -10,18 +10,20 @@ const perksData = [
   },
   {
     icon: "Lightning",
-    title: "Удобно",
-    description: "Оплату можно принимать прямо на смартфон",
+    title: "Быстро",
+    description: "Скачайте приложение и сразу принимайте платежи",
   },
   {
     icon: "chart",
-    title: "Удобно",
-    description: "Оплату можно принимать прямо на смартфон",
+    title: "Выгодно",
+    description: `Вы платите % только от оборота
+    и экономите на аренде терминала`,
   },
   {
     icon: "lock",
-    title: "Удобно",
-    description: "Оплату можно принимать прямо на смартфон",
+    title: "Безопасно",
+    description: `Данные платежа 
+    в зашифрованном виде`,
   },
 ];
 
@@ -40,6 +42,7 @@ const HowWorks = () => {
       <div className="how-works-cards">
         <div className="how-works-card first">
           <img src="/cards/first-phone.png" alt="" className="card-phone" />
+          <img src="/Phone-test.svg" className="phone-mobile" alt="" />
           <div className="card-content">
             <span className="card-feature">Более 100 валют</span>
             <h4 className="card-title">
@@ -51,6 +54,7 @@ const HowWorks = () => {
         </div>
         <div className="how-works-card second">
           <img src="/cards/second-phone.png" alt="" className="card-phone" />
+          <img src="/Phone-test-2.svg" className="phone-mobile" alt="" />
           <img src="/cards/second-nfc.png" alt="" className="card-nfc" />
           <img
             src="/cards/second-circle.png"
@@ -79,13 +83,17 @@ const HowWorks = () => {
         </div>
         <div className="how-works-card third">
           <img src="/cards/first-phone.png" alt="" className="card-phone" />
+          <img src="/Phone-test-3.svg" className="phone-mobile" alt="" />
           <div className="card-content">
-            <span className="card-feature">Более 100 валют</span>
+            <span className="card-feature">24 - 48 часов</span>
             <h4 className="card-title">
-              <span className="bold">создайте заказ</span>
-              <br />В удобной валюте
+              <span className="bold">получите деньги</span>
+              <br />
+              без лишних задержек
             </h4>
-            <p className="card-caption">В приложении Pay2day мобильная касса</p>
+            <p className="card-caption">
+              Переведём выручку на счет в вашем банке
+            </p>
           </div>
         </div>
       </div>

@@ -15,8 +15,10 @@
 
     cursor:text;
 
-    &:hover {
-        outline: 2px solid #DFE5FF
+    @media (min-width: globals.$break-point) {
+        &:hover{
+            outline: 2px solid #DFE5FF;
+        }
     }
 
     .input {

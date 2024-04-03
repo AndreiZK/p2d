@@ -61,6 +61,8 @@
         padding: 2rem 2.5rem;
         border-radius: 0.75rem;
 
+        background-color: #FBFCFF;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -133,9 +135,12 @@
     .form-container {
         padding-inline: 1rem;
         width: auto;
+        margin-top: 2rem;
+        gap: 2rem;
 
         h2 {
             font-size: 20px;
+            margin: 0;
         }
 
         .form-steps {

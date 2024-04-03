@@ -1,0 +1,293 @@
+@use 'globals';
+
+.scenarios {
+
+    width: 1400px;
+    margin-inline: auto;
+    margin-block: 100px;
+    
+
+    .scenarios-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 60px;
+    }
+
+    .scenarios-title {
+        
+        color: globals.$black-500;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .scenarios-subtitle {
+
+        color: globals.$black-200;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .scenarios-items{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .flex {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .scenario {
+            position: relative;
+            width: 100%;
+            max-width: 1320px;
+            background: #F6F7FB;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+            padding-left: 80px;
+            overflow: hidden;
+
+            &:hover {
+                .scenario-card {
+                    transform: scale(1.3);
+                }
+                .scenario-phone {
+                    transform: scale(1.1);
+                }
+                .scenario-card-large {
+                    transform: scale(1.3);
+                }
+                .scenario-phone-large {
+                    transform: scale(1.1);
+                }
+            }
+
+            &.scenario-small {
+                height: 314px;
+            }
+
+            &.scenario-large {
+                height: 364px;
+            }
+
+            .scenario-phone {
+                position: absolute;
+                right: -130px;
+                top: -215px;
+                height: 740px;
+                transition: transform 0.3s;
+                &.phone-2 {
+                    top: -8%;
+                height: 130%;
+                right: -90px;
+                }
+            } 
+            .scenario-card {
+                position: absolute;
+                right: -100px;
+                bottom: 0;
+                width: 400px;
+                transition: transform 0.3s;
+                &.card-2 {
+                    width: 300px;
+                    right: 0;
+                    bottom: 0px;
+                }
+            } 
+
+            @media (min-width: globals.$break-point) {
+                
+                .scenario-phone-large {
+                    position: absolute;
+                    top: 100px;
+                    right: 400px;
+                    width: 300px;
+                    transition: transform 0.3s;
+                }
+    
+                .scenario-card-large {
+                    width: 550px;
+                    position: absolute;
+                    bottom: -170px;
+                    right: 0;
+                    transition: transform 0.3s;
+                }
+            }
+
+            
+
+            .scenario-title, .scenario-description {
+                max-width: 300px;
+            }
+
+            .scenario-title {
+                font-size: 20px;
+                color: globals.$black-600;
+                text-transform: uppercase;
+                font-weight: 600;
+                    .bold {
+                        font-weight: 900;
+                    }
+            }
+
+            .scenario-description {
+                color: globals.$black-200;
+            }
+        }
+    }
+}
+
+@media (max-width: globals.$break-point) {
+    .scenarios {
+
+        width: calc(100% - 2rem);
+        padding-inline: 1rem;
+        margin-block: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .scenarios-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-block: 24px;
+        }
+    
+        .scenarios-title {
+            text-align: center;
+            color: globals.$black-500;
+            font-size: 20px;
+            font-weight: 700;
+            
+        }
+    
+        .scenarios-subtitle {
+    
+            color: globals.$black-200;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    
+        .scenarios-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+    
+            .flex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+    
+            .scenario {
+                position: relative;
+                width: calc(100% - 2rem);
+                max-width: auto;
+                background: #F6F7FB;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+                padding: 12px 16px 12px 16px;
+                overflow: hidden;
+    
+                &:hover {
+                    .scenario-card {
+                        transform: scale(1.3);
+                    }
+                    .scenario-phone {
+                        transform: scale(1.1);
+                    }
+                    .scenario-card-large {
+                        transform: scale(1.3);
+                    }
+                    .scenario-phone-large {
+                        transform: scale(1.1);
+                    }
+                }
+    
+                &.scenario-small {
+                    height: 156px;
+                }
+    
+                &.scenario-large {
+                    height: 156px;
+                }
+    
+                .scenario-phone {
+                    position: absolute;
+                    right: -60px;
+                    top: -100px;
+                    height: 380px;
+                    transition: transform 0.3s;
+                    &.phone-2 {
+                        top: -12%;
+                    height: 140%;
+                    right: -60px;
+                    }
+                } 
+                .scenario-card {
+                    position: absolute;
+                    right: -30px;
+                    bottom: 0;
+                    width: 200px;
+                    transition: transform 0.3s;
+                    &.card-2 {
+                        width: 180px;
+                        right: 0;
+                        bottom: 0px;
+                    }
+                } 
+    
+                .scenario-phone-large {
+                    position: absolute;
+                    height: 160%;
+                    top: 60px;
+                    right: 20px;
+                    
+                    
+                }
+    
+                .scenario-card-large {
+                    width: 200px;
+                    position: absolute;
+                    bottom: -50px;
+                    right: -80px;
+                    
+                }
+    
+                .scenario-title, .scenario-description {
+                    max-width: 50%;
+                }
+    
+                .scenario-title {
+                    font-size: 14px;
+                    color: globals.$black-600;
+                    font-weight: 600;
+                    .bold {
+                        font-weight: 900;
+                    }
+                }
+    
+                .scenario-description {
+                    color: globals.$black-200;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,179 @@
+@use 'globals';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    gap: 100px;
+    .systems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        
+    }
+
+    .contact {
+        width: 1280px;
+        height: 180px;
+        padding: 24px 60px 24px 60px;
+        background: #F9FAFF;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left, .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .left {
+            gap: 32px;
+            
+            .left-text {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: globals.$black-500;
+                }
+                a {
+                    text-decoration: none;
+                    color: globals.$black-200;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .right {
+            gap: 24px;
+        }
+    }
+
+
+    .bottom {
+        width: 1280px;
+        padding: 0 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            a {
+                text-decoration: none;
+                color: #005BFF;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        span {
+            color: globals.$black-200;
+
+        }
+    }
+}
+
+@media (max-width: globals.$break-point) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        gap: 8px;
+        width: calc(100% - 2rem);
+        padding-inline: 1rem;
+        .systems {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            
+        }
+    
+        .contact {
+            width: calc(100% - 1rem);
+            height: auto;
+            padding: 32px 8px 32px 8px;
+            background: #F9FAFF;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+    
+            .left, .right {
+                display: flex;
+                align-items: center;
+            }
+    
+            .left {
+                gap: 8px;
+                
+                .left-text {
+                    display: flex;
+                    flex-direction: column;
+    
+                    span {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: globals.$black-500;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: globals.$black-200;
+                        font-size: 11px;
+                        font-weight: 400;
+                    }
+                }
+            }
+    
+            .right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    
+    
+        .bottom {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+    
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                a {
+                    text-decoration: none;
+                    color: #005BFF;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            span {
+                color: globals.$black-200;
+    
+            }
+        }
+    }
+}
