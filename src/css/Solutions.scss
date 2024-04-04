@@ -81,13 +81,15 @@
         }
     }
 
-    &:hover {
-        .solution-icon.dark {
-            opacity: 1;   
-        }
-        .solution-title {
-            font-weight: 600;
-            color: globals.$black-600;
+    @media (min-width: globals.$break-point) {
+        &:hover {
+            .solution-icon.dark {
+                opacity: 1;   
+            }
+            .solution-title {
+                font-weight: 600;
+                color: globals.$black-600;
+            }
         }
     }
 }
@@ -176,7 +178,7 @@
             }
         }
     
-        &:hover {
+        &:active {
             .solution-icon.dark {
                 opacity: 1;   
             }

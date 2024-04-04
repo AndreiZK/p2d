@@ -1,6 +1,6 @@
 import "../../css/HowWorks.scss";
 
-const paymentSystemsImgs = ["visa.png", "mastercard.png", "mir.png"];
+const paymentSystemsImgs = ["visa.svg", "mastercard.svg", "mir.svg"];
 
 const perksData = [
   {

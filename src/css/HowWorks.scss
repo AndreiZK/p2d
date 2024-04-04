@@ -196,6 +196,12 @@
 
 }
 
+@media (min-width: globals.$break-point) {
+    .phone-mobile {
+        display: none;
+    }
+}
+
 @media (max-width: globals.$break-point) {
     .how-works {
         margin-top: 100px;

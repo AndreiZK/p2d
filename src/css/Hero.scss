@@ -11,6 +11,7 @@
         align-items: center;
     .hero-iphone {
         z-index: 10;
+        height: 753px;
     }
     .hero-map {
         width: 100%;
@@ -71,6 +72,7 @@
         width: calc(100% - 2rem);
         .hero-iphone {
             width: 341px;
+            height: auto;
         }
         .hero-map {
             display: none;

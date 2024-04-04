@@ -32,7 +32,7 @@ const Header = () => {
     <header className="header-wrapper">
       <div className="header-content">
         <div className="nav">
-          <img className="header-logo" src="logo.png" alt="" />
+          <img className="header-logo" src="logo.svg" alt="" />
           <div className="nav-links">
             {navLinksData.map((link, i) => (
               <>
@@ -62,7 +62,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-mobile">
-        <img src="logo-mobile.png" alt="" className="logo-mobile" />
+        <img src="logo-mobile.svg" alt="" className="logo-mobile" />
         <div className="header-btns-mobile">
           <Button variant="blue">Личный кабинет</Button>
           <button
