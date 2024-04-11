@@ -16,14 +16,14 @@ const Footer = () => {
           <img src="mail.svg" alt="" />
           <div className="left-text">
             <span>ОСТАЛИСЬ ВОПРОСЫ?</span>
-            <a href="mailto:info@pay2day.io">info@pay2day.io</a>
+            <a href="mailto:info@pay2day.io">info@amoka.io</a>
           </div>
         </div>
         <div className="right">
           <Button fontSize="lg" variant="white">
             Скачать презентацию
           </Button>
-          <Button fontSize="lg" variant="blue">
+          <Button to="form" fontSize="lg" variant="blue">
             Напишите нам
           </Button>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <a href="/">Политика конфиденциальности</a>
           <a href="/">Договор-оферта</a>
         </div>
-        <span>© Pay2Day LLC 2015-2024</span>
+        <span>© Amoka LLC 2015-2024</span>
       </div>
     </footer>
   );

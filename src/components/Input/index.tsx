@@ -1,3 +1,4 @@
+import { Path, UseFormRegister } from "react-hook-form";
 import "../../css/Input.scss";
 
 import {
@@ -6,27 +7,39 @@ import {
   useRef,
   useState,
 } from "react";
+import { FormState } from "../Form";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   fixedLabel?: boolean;
   errorText?: string;
+  register: UseFormRegister<FormState>;
+  required: boolean;
+  valueLabel: Path<FormState>;
 }
 
-const Input = ({ label, fixedLabel, errorText, ...rest }: InputProps) => {
-  const inputRef = useRef<HTMLInputElement | null>(null);
+const Input = ({
+  label,
+  fixedLabel,
+  errorText,
+  register,
+  required,
+  valueLabel,
+  ...rest
+}: InputProps) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = () => {
-    inputRef.current?.focus();
+    containerRef.current?.children[0].focus();
   };
 
   return (
-    <div onClick={handleClick} className="input-container">
+    <div ref={containerRef} onClick={handleClick} className="input-container">
       <input
         className="input"
         placeholder=" "
-        ref={inputRef}
         data-label={label}
+        {...register(valueLabel)}
         {...rest}
       />
       {!!errorText && <span className="error-text">{errorText}</span>}

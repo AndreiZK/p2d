@@ -29,7 +29,7 @@ const perksData = [
 
 const HowWorks = () => {
   return (
-    <div className="how-works">
+    <div id="how-works" className="how-works">
       <h3 className="how-works-title">Как это работает</h3>
       <span className="how-works-subtitle">
         Соответствует требованиям безопасности Мир, Visa и Mastercard
@@ -82,7 +82,7 @@ const HowWorks = () => {
           </div>
         </div>
         <div className="how-works-card third">
-          <img src="/cards/first-phone.png" alt="" className="card-phone" />
+          <img src="/cards/third-phone.png" alt="" className="card-phone" />
           <img src="/Phone-test-3.svg" className="phone-mobile" alt="" />
           <div className="card-content">
             <span className="card-feature">24 - 48 часов</span>

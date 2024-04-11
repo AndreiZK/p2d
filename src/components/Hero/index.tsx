@@ -37,10 +37,10 @@ const Hero = () => {
       </div>
       <div className="hero-buttons-image">
         <div className="hero-buttons">
-          <Button fontSize="lg" variant="blue">
+          <Button to="form" fontSize="lg" variant="blue">
             Подключить сервис
           </Button>
-          <Button fontSize="lg" variant="gray">
+          <Button to="how-works" fontSize="lg" variant="gray">
             Узнать подробности
           </Button>
         </div>

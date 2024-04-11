@@ -1,3 +1,4 @@
+import { useForm, SubmitHandler } from "react-hook-form";
 import "../../css/Form.scss";
 import Button from "../Button";
 import Input, { Textarea } from "../Input";
@@ -14,12 +15,37 @@ const formStepsData = [
   },
   {
     title: "Готово",
-    description: `Пользуйтесь мобильной кассой в приложении и личном кабинете 
-        на pay2day.io`,
+    description: `Пользуйтесь мобильной кассой в приложении и личном кабинете`,
   },
 ];
 
+export interface FormState {
+  name: string;
+  email: string;
+  phone: string;
+  comment: string;
+}
+
 const Form = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormState>({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "+",
+      comment: "",
+    },
+  });
+
+  const onSubmit: SubmitHandler<FormState> = (data, e) => {
+    e?.preventDefault();
+    console.log(data);
+  };
+
   return (
     <div className="form-container">
       <h2>
@@ -34,14 +60,30 @@ const Form = () => {
           </div>
         ))}
       </div>
-      <form>
+      <form id="form" onSubmit={handleSubmit(onSubmit)}>
         <h3 className="form-title">
           Начать пользоваться <span>мобильной кассой</span>
         </h3>
-        <Input errorText="name error" required label="Имя" />
+        <Input
+          valueLabel="name"
+          register={register}
+          errorText="name error"
+          required
+          label="Имя"
+        />
         <div className="inputs-container">
-          <Input type="tel" label="Мобильный телефон" />
           <Input
+            valueLabel="phone"
+            register={register}
+            required
+            // pattern="^[0-9-+\s()]{6,16}"
+            type="tel"
+            label="Мобильный телефон"
+          />
+          <Input
+            valueLabel="email"
+            register={register}
+            required
             errorText="name error"
             type="email"
             label="Электронная почта"

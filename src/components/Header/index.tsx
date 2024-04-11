@@ -62,7 +62,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-mobile">
-        <img src="logo-mobile.svg" alt="" className="logo-mobile" />
+        <img src="logo.svg" alt="" className="logo-mobile" />
         <div className="header-btns-mobile">
           <Button variant="blue">Личный кабинет</Button>
           <button
