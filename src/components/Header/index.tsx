@@ -57,7 +57,7 @@ const Header = () => {
         </div>
         <div className="header-btns">
           <Dropdown options={["Ru", "Eng"]} />
-          <Button>Написать нам</Button>
+          <Button to="form">Написать нам</Button>
           <Button variant="blue">Личный кабинет</Button>
         </div>
       </div>
@@ -131,7 +131,9 @@ const Header = () => {
           </div>
         </div>
         <div className="mobile-menu-bottom">
-          <Button fontSize="lg">Написать нам</Button>
+          <Button fontSize="lg" to="form">
+            Написать нам
+          </Button>
           <Button fontSize="lg" variant="blue">
             Личный кабинет
           </Button>
