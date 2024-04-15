@@ -3,6 +3,7 @@ import "../../css/Input.scss";
 
 import {
   InputHTMLAttributes,
+  RefObject,
   TextareaHTMLAttributes,
   useRef,
   useState,
@@ -30,7 +31,8 @@ const Input = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = () => {
-    containerRef.current?.children[0].focus();
+    const inputElement = containerRef.current!.children[0] as HTMLInputElement;
+    inputElement.focus();
   };
 
   return (
