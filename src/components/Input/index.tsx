@@ -3,7 +3,6 @@ import "../../css/Input.scss";
 
 import {
   InputHTMLAttributes,
-  RefObject,
   TextareaHTMLAttributes,
   useRef,
   useState,

@@ -30,8 +30,8 @@ const Form = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    // watch,
+    // formState: { errors },
   } = useForm<FormState>({
     defaultValues: {
       name: "",
