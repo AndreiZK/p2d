@@ -49,7 +49,7 @@ const HowWorks = () => {
               <span className="bold">создайте заказ</span>
               <br />В удобной валюте
             </h4>
-            <p className="card-caption">В приложении Pay2day мобильная касса</p>
+            <p className="card-caption">В приложении Amoka мобильная касса</p>
           </div>
         </div>
         <div className="how-works-card second">
