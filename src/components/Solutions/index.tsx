@@ -36,7 +36,9 @@ const solutionsData = [
 const Solutions = () => {
   return (
     <div className="solutions">
-      <h4>Решения от Pay2Day подходят для бизнеса из любой сферы</h4>
+      <h4>
+        Решения от Amoka мобильная касса подходят для бизнеса из любой сферы
+      </h4>
       <div className="solutions-items">
         {solutionsData.map((item, i) => (
           <Solution key={i} {...item} />

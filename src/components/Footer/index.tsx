@@ -16,7 +16,7 @@ const Footer = () => {
           <img src="mail.svg" alt="" />
           <div className="left-text">
             <span>ОСТАЛИСЬ ВОПРОСЫ?</span>
-            <a href="mailto:info@pay2day.io">info@amoka.io</a>
+            <a href="mailto:info@pay2day.io">info@amoka.kz</a>
           </div>
         </div>
         <div className="right">
@@ -33,7 +33,7 @@ const Footer = () => {
           <a href="/">Политика конфиденциальности</a>
           <a href="/">Договор-оферта</a>
         </div>
-        <span>© Amoka LLC 2015-2024</span>
+        <span>© Amoka LLC 2024</span>
       </div>
     </footer>
   );
